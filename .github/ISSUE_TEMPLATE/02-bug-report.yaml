@@ -1,0 +1,74 @@
+name: "🐛 Relatório de bug"
+description: "Relatar um bug que você encontrou em uma funcionalidade do site"
+title: "Bug: [nome da funcionalidade] <pequena descrição sobre>"
+labels:
+  - bug
+  - triage
+body:
+  - type: checkboxes
+    id: sanity-checks
+    attributes:
+      label: Confirme os checkbox abaixo para requisitar a solução
+      options:
+        - label: Eu reproduzi esse bug mais que uma vez.
+          required: true
+        - label: Esse bug ainda não foi registrado em outra issue.
+          required: true
+        - label: Fico a disposição para quaisquer dúvidas sobre como repoduzir o erro.
+          required: false
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Como reproduzir o bug
+      description: |
+        Descreva abaixo os passos para reproduzir o comportamento em formato de lista numerada.
+      placeholder: 1 - Vá para...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Comportamento esperado
+      description: |
+        Descreva abaixo o que você esperava que acontecesse.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "## Desktop (preencha as seguintes informações):"
+  - type: input
+    id: so
+    attributes:
+      label: Sistema operacional
+      placeholder: Linux - Ubuntu
+    validations:
+      required: true
+  - type: input
+    id: lauhcer
+    attributes:
+      label: Navegador 
+      placeholder: Opera
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão  
+      placeholder: "22"
+    validations:
+      required: true
+  - type: textarea
+    id: screen-shot
+    attributes:
+      label: Capturas de tela
+      description: Se aplicável, adicione capturas de tela para ajudar a explicar seu problema
+      render: ImageJ Macro
+    validations:
+      required: false
+  - type: textarea
+    id: aditional-context
+    attributes:
+      label: Contexto adicional
+      description: Adicione qualquer outro contexto sobre o problema aqui
+    validations:
+      required: false
