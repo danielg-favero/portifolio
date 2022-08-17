@@ -9,13 +9,17 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     outline: none;
     border: none;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
   }
 
   body {
     padding: 0 1rem;
+    height: 100vh;
+    width: 100vw;
+
     background-color: ${ColorStyles.primary['100']};
+    color: ${ColorStyles.neutral['100']};
 
     @media only screen and (min-width: ${BreakPoints.md}px){
       padding: 0 6rem;

@@ -1,0 +1,1 @@
+export { Bagde } from './Bagde'
