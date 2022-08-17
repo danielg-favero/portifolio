@@ -4,13 +4,12 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        {/* <!-- Font Rawline--> */}
-        <link href="http://fonts.cdnfonts.com/css/rawline" rel="stylesheet" />
-
-        {/* <!-- Fontawesome--> */}
+        {/* Fontes */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
         />
       </Head>
       <body>
