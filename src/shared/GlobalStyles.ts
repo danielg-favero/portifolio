@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     outline: none;
     border: none;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
   }
 
@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     height: 100vh;
     width: 100vw;
+    overflow-y: auto;
 
     background-color: ${ColorStyles.primary['100']};
     color: ${ColorStyles.neutral['100']};

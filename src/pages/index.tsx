@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 
-import { Hero } from '../containers/Hero'
+import { Hero, AboutMe } from '../containers'
 
 const Home: NextPage = () => {
   return (
     <>
       <Hero />
+      <AboutMe />
     </>
   )
 }

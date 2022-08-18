@@ -1,3 +1,5 @@
 export { Bagde } from './Badge'
 export { IconButton } from './IconButton'
 export { SectionContainer } from './SectionContainer'
+export { SectionTitle } from './SectionTitle'
+export { Button } from './Button'

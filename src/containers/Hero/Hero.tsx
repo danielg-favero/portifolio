@@ -6,7 +6,7 @@ import * as S from './Hero.styles'
 
 export const Hero: React.FC = () => {
   return (
-    <SectionContainer>
+    <SectionContainer variant="primary" leftPadding rightPadding>
       <S.Container>
         <S.HeroInfo>
           <div>
