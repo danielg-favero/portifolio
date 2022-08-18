@@ -9,12 +9,13 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     outline: none;
     border: none;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Poppins', sans-serif;
   }
 
-  body {
-    padding: 0 1rem;
+  html, body {
+    padding: 0;
+    margin: 0;
     height: 100vh;
     width: 100vw;
 
@@ -24,5 +25,12 @@ export const GlobalStyles = createGlobalStyle`
     @media only screen and (min-width: ${BreakPoints.md}px){
       padding: 0 6rem;
     }
+  }
+
+  button {
+    outline: none;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
   }
 `

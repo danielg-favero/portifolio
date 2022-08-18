@@ -6,7 +6,15 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  justify-self: flex-start;
   text-align: center;
+  gap: 3.5rem;
+`
+
+export const MainImage = styled.img`
+  width: 100%;
+  height: 100%;
 `
 
 export const HeroInfo = styled.section`
@@ -43,11 +51,4 @@ export const HeroGreetings = styled.div`
 export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 1rem;
-
-  button {
-    padding: 1.5rem;
-    background-color: ${ColorStyles.primary['50']};
-    color: ${ColorStyles.neutral['100']};
-    font-size: 1.5rem;
-  }
 `

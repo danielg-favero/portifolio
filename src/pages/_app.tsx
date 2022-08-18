@@ -5,8 +5,8 @@ import { GlobalStyles } from '../shared'
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyles />
       <Component {...pageProps} />
+      <GlobalStyles />
     </>
   )
 }
