@@ -12,10 +12,5 @@ interface SectionTitleProps {
  *  @example <SectionTitle text="Lorem Ipsum" />
  */
 export const SectionTitle: React.FC<SectionTitleProps> = ({ text }) => {
-  return (
-    <S.SectionTitleContainer>
-      <div />
-      {text}
-    </S.SectionTitleContainer>
-  )
+  return <S.SectionTitleContainer>{text}</S.SectionTitleContainer>
 }
