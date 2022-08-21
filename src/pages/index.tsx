@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 
-import { Hero, AboutMe, Projects } from '../containers'
+import { Hero, AboutMe, Projects, ProfessionalExperiences } from '../containers'
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +8,7 @@ const Home: NextPage = () => {
       <Hero />
       <AboutMe />
       <Projects />
+      <ProfessionalExperiences />
     </>
   )
 }
