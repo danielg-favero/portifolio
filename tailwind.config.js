@@ -28,9 +28,6 @@ module.exports = {
         100: '#FEFEFE'
       }
     },
-    fontFamily: {
-      display: ['Poppins']
-    }
   },
   plugins: [],
 }
