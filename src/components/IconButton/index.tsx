@@ -8,7 +8,10 @@ export const IconButton: React.FC<IIconButtonProps> = ({
   ...rest
 }) => {
   return (
-    <button className="p-6 text-2xl text-neutral-100 bg-primary-50" {...rest}>
+    <button
+      className="p-5 py-6 text-2xl hexagon text-neutral-100 bg-primary-50"
+      {...rest}
+    >
       {children}
     </button>
   );

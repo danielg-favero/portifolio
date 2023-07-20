@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col items-center gap-4">
             <Badge>Olá, me chamo</Badge>
-            <h1 className="text-3xl font-bold text-center w-fit text-primary-50">
+            <h1 className="text-3xl font-bold leading-6 text-center w-fit text-primary-50">
               Daniel Gustavo Favero
             </h1>
           </div>
