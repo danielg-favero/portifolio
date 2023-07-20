@@ -1,6 +1,7 @@
-import { Badge, Section } from "@/components";
+import { Badge, Section, IconButton } from "@/components";
 import Image from "next/image";
 import React from "react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const Hero: React.FC = () => {
   return (
@@ -17,10 +18,16 @@ export const Hero: React.FC = () => {
             Frontend developer x UI / UX Designer
           </p>
         </div>
-        <div>
-          <button>Instagram</button>
-          <button>Linkedin</button>
-          <button>Github</button>
+        <div className="flex gap-4">
+          <IconButton>
+            <FaInstagram />
+          </IconButton>
+          <IconButton>
+            <FaLinkedin />
+          </IconButton>
+          <IconButton>
+            <FaGithub />
+          </IconButton>
         </div>
         <Image
           src="/hero_photo.png"

@@ -1,22 +1,36 @@
-import { Section } from "@/components";
+import { Button, InfoCard, Section, SectionTitle } from "@/components";
+import { FaGraduationCap, FaUniversity, FaDownload } from "react-icons/fa";
+import { MdLocationPin, MdDownload } from "react-icons/md";
 import React from "react";
 
 export const About: React.FC = () => {
   return (
     <Section>
-      <h2>Sobre mim</h2>
-      <div>
-        <p>Engenharia de Computação</p>
-        <p>UTFPR - Pato Branco</p>
-        <p>Pato Branco - PR</p>
-        <p>
+      <SectionTitle>Sobre Mim</SectionTitle>
+      <div className="flex flex-col gap-4">
+        <InfoCard>
+          <FaGraduationCap />
+          Engenharia de Computação
+        </InfoCard>
+        <InfoCard>
+          <FaUniversity />
+          UTFPR - Pato Branco
+        </InfoCard>
+        <InfoCard>
+          <MdLocationPin />
+          Pato Branco - PR
+        </InfoCard>
+        <p className="text-lg font-light text-neutral-100">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non
           tortor quis augue mollis luctus. Integer pharetra, enim et placerat
           convallis, diam purus rhoncus magna, vitae ullamcorper sem magna eget
           nibh. Mauris at finibus mauris. Maecenas eu tellus vel diam fringilla
           feugiat ut sed metus.
         </p>
-        <button>Currículo</button>
+        <Button>
+          <MdDownload />
+          Currículo
+        </Button>
       </div>
     </Section>
   );

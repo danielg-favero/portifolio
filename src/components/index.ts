@@ -1,3 +1,7 @@
 export * from './Section'
 export * from './Footer'
 export * from './Badge'
+export * from './SectionTitle'
+export * from './IconButton'
+export * from './InfoCard'
+export * from './Button'
