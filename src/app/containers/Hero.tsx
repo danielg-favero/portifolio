@@ -5,37 +5,39 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const Hero: React.FC = () => {
   return (
-    <Section>
-      <div className="flex flex-col items-center gap-14">
-        <div className="flex flex-col items-center gap-6">
-          <div className="flex flex-col items-center gap-4">
-            <Badge>Olá, me chamo</Badge>
-            <h1 className="text-3xl font-bold leading-6 text-center w-fit text-primary-50">
-              Daniel Gustavo Favero
-            </h1>
+    <section className="w-full px-4 mt-24 lg:mt-44 max-w-7xl">
+      <div className="flex flex-col items-center w-full lg:flex-row lg:justify-between gap-14">
+        <div className="flex flex-col items-center gap-14 lg:items-start lg:justify-between lg:h-[532px]">
+          <div className="flex flex-col items-center gap-6 lg:gap-8 lg:items-start">
+            <div className="flex flex-col items-center gap-4 lg:gap-6 lg:items-start">
+              <Badge>Olá, me chamo</Badge>
+              <h1 className="text-3xl font-bold leading-6 text-center lg:text-6xl lg:text-left w-fit text-primary-50">
+                Daniel Gustavo Favero
+              </h1>
+            </div>
+            <p className="text-sm font-light text-center lg:text-xl text-neutral-100">
+              Frontend developer x UI / UX Designer
+            </p>
           </div>
-          <p className="text-sm font-light text-center text-neutral-100">
-            Frontend developer x UI / UX Designer
-          </p>
-        </div>
-        <div className="flex gap-4">
-          <IconButton>
-            <FaInstagram />
-          </IconButton>
-          <IconButton>
-            <FaLinkedin />
-          </IconButton>
-          <IconButton>
-            <FaGithub />
-          </IconButton>
+          <div className="flex gap-4">
+            <IconButton>
+              <FaInstagram />
+            </IconButton>
+            <IconButton>
+              <FaLinkedin />
+            </IconButton>
+            <IconButton>
+              <FaGithub />
+            </IconButton>
+          </div>
         </div>
         <Image
           src="/hero_photo.png"
           alt="Foto de Daniel Gustavo Favero"
-          width={500}
-          height={700}
+          width={624}
+          height={767}
         />
       </div>
-    </Section>
+    </section>
   );
 };

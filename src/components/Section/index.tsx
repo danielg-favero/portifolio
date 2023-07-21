@@ -5,5 +5,5 @@ import { ISectionProps } from "./types";
 export * from "./types";
 
 export const Section: React.FC<ISectionProps> = ({ children }) => {
-  return <section className="w-full px-4 py-20 ">{children}</section>;
+  return <section className="w-full px-4 py-20 max-w-7xl">{children}</section>;
 };
