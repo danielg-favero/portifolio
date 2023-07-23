@@ -12,7 +12,7 @@ import Image from "next/image";
 export const Projects: React.FC = () => {
   return (
     <Section>
-      <SectionTitle>Projetos</SectionTitle>
+      <SectionTitle id="projects">Projetos</SectionTitle>
       <div className="flex flex-col gap-12 lg:gap-16">
         <Tab tabs={["Desenvolvedor", "Designer"]}>
           <Image
@@ -31,7 +31,7 @@ export const Projects: React.FC = () => {
         <div className="flex flex-col justify-center gap-6 lg:gap-8">
           <div className="flex items-center gap-8">
             <Divider />
-            <h3 className="w-full text-lg font-medium text-center uppercase before: text-primary-30">
+            <h3 className="w-full text-lg font-medium text-center uppercase text-primary-30 lg:text-2xl">
               Ferramentas e Linguagens
             </h3>
             <Divider />

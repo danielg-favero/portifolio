@@ -10,7 +10,7 @@ import "swiper/css";
 export const Experience: React.FC = () => {
   return (
     <Section>
-      <SectionTitle>Experiências Profissionais</SectionTitle>
+      <SectionTitle id="experience">Experiências Profissionais</SectionTitle>
       <Swiper slidesPerView="auto">
         <SwiperSlide>
           <ExperienceCard

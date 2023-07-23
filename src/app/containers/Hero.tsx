@@ -1,12 +1,13 @@
-import { Badge, Section, IconButton } from "@/components";
+import { Badge, Section, IconButton, Header } from "@/components";
 import Image from "next/image";
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="w-full px-4 mt-24 lg:mt-44 max-w-7xl">
-      <div className="flex flex-col items-center w-full lg:flex-row lg:justify-between gap-14">
+    <section className="w-full px-4 mt-6 lg:mt-12 max-w-7xl">
+      <Header />
+      <div className="flex flex-col items-center w-full mt-24 lg:flex-row lg:justify-between gap-14 lg:mt-44">
         <div className="flex flex-col items-center gap-14 lg:items-start lg:justify-between lg:h-[532px]">
           <div className="flex flex-col items-center gap-6 lg:gap-8 lg:items-start">
             <div className="flex flex-col items-center gap-4 lg:gap-6 lg:items-start">

@@ -10,7 +10,7 @@ import Image from "next/image";
 export const About: React.FC = () => {
   return (
     <Section>
-      <SectionTitle>Sobre Mim</SectionTitle>
+      <SectionTitle id="about">Sobre Mim</SectionTitle>
       <div className="flex flex-col w-full gap-4 lg:flex-row lg:gap-16">
         <div className="flex flex-col gap-4 lg:gap-6 lg:w-1/2">
           <InfoCard>
