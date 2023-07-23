@@ -24,16 +24,20 @@ export const ExperienceCard: React.FC<IExperienceCardProps> = ({
   };
 
   return (
-    <div className="flex flex-col gap-10 px-6 py-10 bg-primary-80">
+    <div className="flex flex-col gap-10 lg:gap-14 px-6 py-10 lg:px-12 lg:py-14 bg-primary-80 max-w-[536px]">
       <Image src={companyImage} alt={companyImageAlt} width={143} height={36} />
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 lg:gap-6">
         <div className="flex flex-col">
-          <p className="text-sm font-medium text-neutral-100">{title}</p>
-          <p className="text-xs font-light text-primary-40">
+          <p className="text-sm font-medium text-neutral-100 lg:text-xl">
+            {title}
+          </p>
+          <p className="text-xs font-light text-primary-40 lg:text-base">
             {formatDate(startDate)} - {formatDate(endDate)}
           </p>
         </div>
-        <p className="text-lg font-light text-neutral-100">{description}</p>
+        <p className="text-lg font-light text-neutral-100 lg:text-xl">
+          {description}
+        </p>
       </div>
     </div>
   );

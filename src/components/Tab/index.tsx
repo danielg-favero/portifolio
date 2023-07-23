@@ -25,7 +25,7 @@ export const Tab: React.FC<ITabProps> = ({ children, tabs }) => {
           <button
             key={tab}
             onClick={() => handleTabClick(index)}
-            className={`w-full px-6 py-3 font-medium text-xs text-neutral-100 ${
+            className={`w-full lg:w-fit px-6 lg:px-8 lg:text-base lg:py-4 py-3 font-medium text-xs hover:bg-primary-60 transition-colors text-neutral-100 ${
               currentTab === index ? "bg-primary-50" : "bg-primary-70"
             }`}
           >
