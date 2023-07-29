@@ -1,0 +1,32 @@
+{
+  "id": "abstract",
+  "label": "About",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "uid", "placeholder": "" } },
+      "abstract": {
+        "type": "Text",
+        "config": { "label": "abstract", "placeholder": "" }
+      },
+      "graduation": {
+        "type": "Text",
+        "config": { "label": "graduation", "placeholder": "" }
+      },
+      "university": {
+        "type": "Text",
+        "config": { "label": "university", "placeholder": "" }
+      },
+      "city": {
+        "type": "Text",
+        "config": { "label": "city", "placeholder": "" }
+      },
+      "curiculum": {
+        "type": "Link",
+        "config": { "label": "curiculum", "placeholder": "", "select": "media" }
+      }
+    }
+  }
+}

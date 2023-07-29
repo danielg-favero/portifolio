@@ -1,9 +1,14 @@
-import { Badge, Section, IconButton, Header } from "@/components";
+import { Badge, IconButton, Header } from "@/components";
+import { createClient } from "@/prismicio";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export const Hero: React.FC = () => {
+export const Hero: React.FC = async () => {
+  const prismic = createClient();
+  const links = await prismic.getByUID("links", "links");
+
   return (
     <section className="w-full px-4 mt-6 lg:mt-12 max-w-7xl">
       <Header />
@@ -21,13 +26,13 @@ export const Hero: React.FC = () => {
             </p>
           </div>
           <div className="flex gap-4">
-            <IconButton>
+            <IconButton href={links.data.instagram.url}>
               <FaInstagram />
             </IconButton>
-            <IconButton>
+            <IconButton href={links.data.linkedin.url}>
               <FaLinkedin />
             </IconButton>
-            <IconButton>
+            <IconButton href={links.data.github.url}>
               <FaGithub />
             </IconButton>
           </div>

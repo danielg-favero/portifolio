@@ -1,18 +1,21 @@
 import React from "react";
 import { IExperienceCardProps } from "./types";
-import Image from "next/image";
+import { PrismicNextImage } from "@prismicio/next";
+import { DateField } from "@prismicio/client";
 
 export * from "./types";
 
 export const ExperienceCard: React.FC<IExperienceCardProps> = ({
   companyImage,
-  companyImageAlt,
   description,
   endDate,
   startDate,
   title,
 }) => {
-  const formatDate = (date: Date): string => {
+  const formatDate = (dateField: DateField): string => {
+    if (!dateField) return "";
+
+    const date = new Date(dateField);
     const maxChar = 3;
 
     const fullMonth = date.toLocaleString("pt-br", { month: "long" });
@@ -25,7 +28,10 @@ export const ExperienceCard: React.FC<IExperienceCardProps> = ({
 
   return (
     <div className="flex flex-col gap-10 lg:gap-14 px-6 py-10 lg:px-12 lg:py-14 bg-primary-80 max-w-[536px]">
-      <Image src={companyImage} alt={companyImageAlt} width={143} height={36} />
+      <PrismicNextImage
+        field={companyImage}
+        className="max-h-9 lg:max-h-10 w-fit"
+      />
       <div className="flex flex-col gap-4 lg:gap-6">
         <div className="flex flex-col">
           <p className="text-sm font-medium text-neutral-100 lg:text-xl">

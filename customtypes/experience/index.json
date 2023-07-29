@@ -1,0 +1,36 @@
+{
+  "id": "experience",
+  "label": "Experience",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "config": { "label": "UID" }, "type": "UID" },
+      "company_logo": {
+        "type": "Image",
+        "config": {
+          "label": "company_logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": { "label": "title", "placeholder": "" }
+      },
+      "start_date": {
+        "type": "Date",
+        "config": { "label": "start_date", "placeholder": "" }
+      },
+      "end_date": {
+        "type": "Date",
+        "config": { "label": "end_date", "placeholder": "" }
+      },
+      "description": {
+        "type": "Text",
+        "config": { "label": "description", "placeholder": "" }
+      }
+    }
+  }
+}
