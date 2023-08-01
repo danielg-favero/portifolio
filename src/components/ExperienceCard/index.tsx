@@ -27,7 +27,7 @@ export const ExperienceCard: React.FC<IExperienceCardProps> = ({
   };
 
   return (
-    <div className="flex flex-col gap-10 lg:gap-14 px-6 py-10 lg:px-12 lg:py-14 bg-primary-80 max-w-[536px]">
+    <div className="flex flex-col gap-10 lg:gap-14 px-6 py-10 lg:px-12 lg:py-14 bg-primary-80 max-w-[288px] lg:max-w-[536px]">
       <PrismicNextImage
         field={companyImage}
         className="max-h-9 lg:max-h-10 w-fit"

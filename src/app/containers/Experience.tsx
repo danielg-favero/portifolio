@@ -30,7 +30,7 @@ export const Experience: React.FC = () => {
       <Swiper
         slidesPerView="auto"
         spaceBetween={64}
-        className="w-screen !pr-96"
+        className="w-screen pr-80 lg:!pr-96"
         grabCursor
       >
         {experiences.map((experience) => (
