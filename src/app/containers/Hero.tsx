@@ -1,4 +1,4 @@
-import { Badge, IconButton, Header } from "@/components";
+import { Badge, HexagonButton, Header } from "@/components";
 import { createClient } from "@/prismicio";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,15 +26,15 @@ export const Hero: React.FC = async () => {
             </p>
           </div>
           <div className="flex gap-4">
-            <IconButton href={links.data.instagram.url}>
+            <HexagonButton href={links.data.instagram.url}>
               <FaInstagram />
-            </IconButton>
-            <IconButton href={links.data.linkedin.url}>
+            </HexagonButton>
+            <HexagonButton href={links.data.linkedin.url}>
               <FaLinkedin />
-            </IconButton>
-            <IconButton href={links.data.github.url}>
+            </HexagonButton>
+            <HexagonButton href={links.data.github.url}>
               <FaGithub />
-            </IconButton>
+            </HexagonButton>
           </div>
         </div>
         <Image

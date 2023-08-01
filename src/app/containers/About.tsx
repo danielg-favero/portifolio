@@ -12,8 +12,6 @@ export const About: React.FC = async () => {
   const prismic = createClient();
   const about = await prismic.getByUID("abstract", "about");
 
-  console.log(about.data.curiculum);
-
   return (
     <Section>
       <SectionTitle id="about">Sobre Mim</SectionTitle>

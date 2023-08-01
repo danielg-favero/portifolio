@@ -206,10 +206,92 @@ interface LinksDocumentData {
 export type LinksDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<LinksDocumentData>, "links", Lang>;
 
+/**
+ * Item in *Projects → icons*
+ */
+export interface ProjectsDocumentDataIconsItem {
+  /**
+   * icon field in *Projects → icons*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.icons[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+}
+
+/**
+ * Content for Projects documents
+ */
+interface ProjectsDocumentData {
+  /**
+   * thumbnail field in *Projects*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.thumbnail
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  thumbnail: prismic.ImageField<never>;
+
+  /**
+   * type field in *Projects*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: dev
+   * - **API ID Path**: projects.type
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  type: prismic.SelectField<"dev" | "design", "filled">;
+
+  /**
+   * project_url field in *Projects*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.project_url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  project_url: prismic.LinkField;
+
+  /**
+   * icons field in *Projects*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.icons[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  icons: prismic.GroupField<Simplify<ProjectsDocumentDataIconsItem>>;
+}
+
+/**
+ * Projects document from Prismic
+ *
+ * - **API ID**: `projects`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProjectsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ProjectsDocumentData>,
+    "projects",
+    Lang
+  >;
+
 export type AllDocumentTypes =
   | AbstractDocument
   | ExperienceDocument
-  | LinksDocument;
+  | LinksDocument
+  | ProjectsDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -227,6 +309,8 @@ declare module "@prismicio/client" {
       ExperienceDocumentData,
       LinksDocument,
       LinksDocumentData,
+      ProjectsDocument,
+      ProjectsDocumentData,
       AllDocumentTypes,
     };
   }

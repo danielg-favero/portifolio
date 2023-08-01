@@ -1,7 +1,11 @@
 "use client";
 
 import React, { Children, ReactElement, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
 import { ITabProps } from "./types";
+import { NextSlideButon, PreviousSlideButon } from "../ProjectTab/parts";
 
 export * from "./types";
 
@@ -18,9 +22,12 @@ export const Tab: React.FC<ITabProps> = ({ children, tabs }) => {
 
   const currentChild = childrenArray[currentTab];
 
+  const currentChildChildren = currentChild.props
+    .children as Array<ReactElement>;
+
   return (
     <div>
-      <div className="flex">
+      <div className="flex w-full border-b border-b-primary-70">
         {tabs.map((tab, index) => (
           <button
             key={tab}
@@ -33,7 +40,11 @@ export const Tab: React.FC<ITabProps> = ({ children, tabs }) => {
           </button>
         ))}
       </div>
-      <div>{currentChild}</div>
+      <Swiper slidesPerView={1} loop>
+        {currentChildChildren.map((child, index) => (
+          <SwiperSlide key={index}>{child}</SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

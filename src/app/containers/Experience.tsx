@@ -25,7 +25,12 @@ export const Experience: React.FC = () => {
   return (
     <Section>
       <SectionTitle id="experience">Experiências Profissionais</SectionTitle>
-      <Swiper slidesPerView="auto" spaceBetween={64} className="w-screen">
+      <Swiper
+        slidesPerView="auto"
+        spaceBetween={64}
+        className="w-screen"
+        grabCursor
+      >
         {experiences.map((experience) => (
           <SwiperSlide key={experience.uid} className="!w-auto">
             <ExperienceCard

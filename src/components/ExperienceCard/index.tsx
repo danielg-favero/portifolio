@@ -13,7 +13,7 @@ export const ExperienceCard: React.FC<IExperienceCardProps> = ({
   title,
 }) => {
   const formatDate = (dateField: DateField): string => {
-    if (!dateField) return "";
+    if (!dateField) return "Até o Momento";
 
     const date = new Date(dateField);
     const maxChar = 3;

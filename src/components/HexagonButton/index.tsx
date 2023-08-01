@@ -1,15 +1,15 @@
 import React from "react";
-import { IIconButtonProps } from "./types";
+import { IHexagonButtonProps } from "./types";
 import Link from "next/link";
 
 export * from "./types";
 
-export const IconButton: React.FC<IIconButtonProps> = ({
+export const HexagonButton: React.FC<IHexagonButtonProps> = ({
   children,
   href = "",
   ...rest
 }) => {
-  const iconButtonContent = (
+  const hexagonButtonContent = (
     <button
       className="px-5 py-6 text-2xl transition-transform lg:px-6 lg:py-7 lg:text-3xl hexagon text-neutral-100 bg-primary-50 hover:bg-primary-60 hover:scale-105 active:bg-primary-40 active:scale-95"
       {...rest}
@@ -18,11 +18,11 @@ export const IconButton: React.FC<IIconButtonProps> = ({
     </button>
   );
 
-  if (!href.length) iconButtonContent;
+  if (!href.length) hexagonButtonContent;
 
   return (
     <Link href={href} target="_blank">
-      {iconButtonContent}
+      {hexagonButtonContent}
     </Link>
   );
 };
