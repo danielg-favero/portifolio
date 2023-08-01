@@ -26,13 +26,13 @@ export const Hero: React.FC = async () => {
             </p>
           </div>
           <div className="flex gap-4">
-            <HexagonButton href={links.data.instagram.url}>
+            <HexagonButton field={links.data.instagram}>
               <FaInstagram />
             </HexagonButton>
-            <HexagonButton href={links.data.linkedin.url}>
+            <HexagonButton field={links.data.linkedin}>
               <FaLinkedin />
             </HexagonButton>
-            <HexagonButton href={links.data.github.url}>
+            <HexagonButton field={links.data.github}>
               <FaGithub />
             </HexagonButton>
           </div>

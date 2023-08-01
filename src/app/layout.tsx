@@ -1,5 +1,12 @@
-import Head from "next/head";
+import { Poppins } from "@next/font/google";
 import "./globals.css";
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--poppins-font",
+});
 
 export default function RootLayout({
   children,
@@ -8,15 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <body className="scroll-smooth">{children}</body>
+      <body className={`${poppins.variable}`}>{children}</body>
     </html>
   );
 }

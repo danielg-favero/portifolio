@@ -1,12 +1,12 @@
 import React from "react";
 import { IHexagonButtonProps } from "./types";
-import Link from "next/link";
+import { PrismicNextLink } from "@prismicio/next";
 
 export * from "./types";
 
 export const HexagonButton: React.FC<IHexagonButtonProps> = ({
   children,
-  href = "",
+  field,
   ...rest
 }) => {
   const hexagonButtonContent = (
@@ -18,11 +18,11 @@ export const HexagonButton: React.FC<IHexagonButtonProps> = ({
     </button>
   );
 
-  if (!href.length) hexagonButtonContent;
+  if (!field) hexagonButtonContent;
 
   return (
-    <Link href={href} target="_blank">
+    <PrismicNextLink field={field} target="_blank">
       {hexagonButtonContent}
-    </Link>
+    </PrismicNextLink>
   );
 };

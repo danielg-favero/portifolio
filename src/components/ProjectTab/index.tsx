@@ -21,7 +21,7 @@ export const ProjectTab: React.FC<IProjectTabProps> = ({ project }) => {
         <div className="relative w-full lg:w-4/5">
           <div className="absolute w-3 h-3 border-2 -top-1 -left-1 border-primary-60 bg-primary-40" />
           <div className="absolute right-4 top-4">
-            <LinkButton href={project.data.project_url.url}>
+            <LinkButton field={project.data.project_url}>
               <FaLink />
             </LinkButton>
           </div>

@@ -6,7 +6,6 @@ import graduationCapIcon from "@/assets/icons/graduationCap.svg";
 import React from "react";
 import Image from "next/image";
 import { createClient } from "@/prismicio";
-import Link from "next/link";
 
 export const About: React.FC = async () => {
   const prismic = createClient();
@@ -34,12 +33,10 @@ export const About: React.FC = async () => {
           <p className="text-lg font-light text-neutral-100">
             {about.data.abstract}
           </p>
-          <Link href={about.data.curiculum.url} target="_blank">
-            <Button>
-              <MdDownload />
-              Currículo
-            </Button>
-          </Link>
+          <Button field={about.data.curiculum}>
+            <MdDownload />
+            Currículo
+          </Button>
         </div>
       </div>
     </Section>
