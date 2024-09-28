@@ -1,6 +1,8 @@
+"use client";
+
+import Link from "next/link";
 import React from "react";
 import { IHeaderLinkProps } from "./types";
-import Link from "next/link";
 
 export const HeaderLink: React.FC<IHeaderLinkProps> = ({
   children,

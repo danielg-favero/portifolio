@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 export const Divider: React.FC = () => {
   return (

@@ -1,10 +1,7 @@
 "use client";
 
+import { HeaderLink, Icon } from "@/components";
 import React, { useState } from "react";
-import { HeaderLink } from "./HeaderLink";
-import menuIcon from "@/assets/icons/menu.svg";
-import close from "@/assets/icons/close.svg";
-import Image from "next/image";
 
 export * from "./HeaderLink";
 export * from "./types";
@@ -19,7 +16,7 @@ export const Header: React.FC = () => {
   return (
     <div className="flex flex-row-reverse">
       <button onClick={toogleIsOpen} className=" text-primary-40 lg:hidden">
-        <Image src={menuIcon} alt="Botão dos links do header" />
+        <Icon name="bars" />
       </button>
       <div
         className={`${
@@ -30,7 +27,7 @@ export const Header: React.FC = () => {
           onClick={toogleIsOpen}
           className="self-end text-primary-40 lg:hidden w-fit"
         >
-          <Image src={close} alt="Botão de fechar os links do header" />
+          <Icon name="bars" />
         </button>
         <nav
           className="flex flex-col lg:flex-row lg:justify-center"
