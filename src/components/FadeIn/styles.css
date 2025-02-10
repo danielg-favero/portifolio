@@ -1,0 +1,13 @@
+.fadein-section {
+    opacity: 0;
+    transform: translate(0, 50%);
+    visibility: hidden;
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+    will-change: opacity, visibility;
+}
+
+.fadein-visible-section {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}

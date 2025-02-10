@@ -1,5 +1,6 @@
 import {
   Button,
+  FadeIn,
   Icon,
   IconKeys,
   InfoCard,
@@ -25,21 +26,25 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       <div className="flex flex-col w-full gap-4 lg:flex-row lg:gap-16">
         <div className="flex flex-col gap-4 lg:gap-6 lg:w-1/2">
           {slice.items.map((item) => (
-            <InfoCard key={item.icon}>
-              <Icon
-                className="w-6 h-6 lg:w-8 lg:h-8"
-                name={item.icon as IconKeys}
-              />
-              <RichText field={item.information} />
-            </InfoCard>
+            <FadeIn key={item.icon}>
+              <InfoCard>
+                <Icon
+                  className="w-6 h-6 lg:w-8 lg:h-8"
+                  name={item.icon as IconKeys}
+                />
+                <RichText field={item.information} />
+              </InfoCard>
+            </FadeIn>
           ))}
         </div>
         <div className="flex flex-col gap-4 lg:justify-between lg:w-1/2">
-          <RichText field={slice.primary.abstract} />
-          <Button field={slice.primary.curriculum}>
-            <Icon name="download" />
-            Currículo
-          </Button>
+          <FadeIn>
+            <RichText field={slice.primary.abstract} />
+            <Button field={slice.primary.curriculum}>
+              <Icon name="download" />
+              Currículo
+            </Button>
+          </FadeIn>
         </div>
       </div>
     </Section>

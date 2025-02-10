@@ -37,6 +37,13 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "post_type": {
+          "type": "Text",
+          "config": {
+            "label": "Post Type",
+            "placeholder": ""
+          }
         }
       }
     }

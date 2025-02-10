@@ -14,3 +14,4 @@ export * from "./Section";
 export * from "./SectionTitle";
 export * from "./SliderButton";
 export * from "./Tab";
+export * from "./FadeIn";

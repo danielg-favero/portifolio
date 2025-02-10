@@ -273,6 +273,16 @@ export interface OnTvSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Post Type field in *OnTv → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: on_tv.items[].post_type
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  post_type: prismic.KeyTextField;
 }
 
 /**

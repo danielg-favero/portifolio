@@ -1,4 +1,4 @@
-import { ProjectsTabs, Section, SectionTitle } from "@/components";
+import { FadeIn, ProjectsTabs, Section, SectionTitle } from "@/components";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
