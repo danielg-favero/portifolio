@@ -14,9 +14,9 @@ export const Badge: React.FC<IBadgeProps> = ({
   children,
 }) => {
   const variantStyle: Record<BadgeVariant, string> = {
-    primary: "bg-primary-50 text-primary-80",
-    secondary: "bg-primary-70 text-primary-50",
-    tertiary: "bg-primary-80 text-primary-60",
+    primary: "bg-primary-50 text-neutral-100",
+    secondary: "bg-primary-70 text-neutral-100",
+    tertiary: "bg-primary-80 text-neutral-100",
   };
 
   const sizeStyle: Record<BadgeSize, string> = {

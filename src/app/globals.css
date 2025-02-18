@@ -6,3 +6,9 @@
 .hexagon {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
+
+@media screen and (min-width: 1024px) {
+    * {
+        font-size: calc(0.8 * 1rem);
+    }
+}

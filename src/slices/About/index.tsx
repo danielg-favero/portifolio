@@ -40,6 +40,8 @@ const About = ({ slice }: AboutProps): JSX.Element => {
         <div className="flex flex-col gap-4 lg:justify-between lg:w-1/2">
           <FadeIn>
             <RichText field={slice.primary.abstract} />
+          </FadeIn>
+          <FadeIn>
             <Button field={slice.primary.curriculum}>
               <Icon name="download" />
               Currículo

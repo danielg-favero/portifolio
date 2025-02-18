@@ -26,7 +26,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     <section className="w-full px-4 mt-6 lg:mt-12 max-w-7xl">
       {/* <Header /> */}
       <div className="flex flex-col items-center w-full mt-24 lg:flex-row lg:justify-between gap-14 lg:mt-44">
-        <div className="flex flex-col items-center gap-14 lg:items-start lg:justify-between lg:h-[532px]">
+        <div className="flex flex-col items-center gap-14 lg:items-start lg:justify-between lg:h-[266px]">
           <div className="flex flex-col items-center gap-2 lg:gap-4 lg:items-start">
             <FadeIn>
               <div className="flex flex-col items-center gap-4 lg:gap-6 lg:items-start">
@@ -55,7 +55,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           </div>
         </div>
         <FadeIn>
-          <Image field={slice.primary.image} width={624} height={767} />
+          <Image field={slice.primary.image} width={416} height={511} />
         </FadeIn>
       </div>
     </section>

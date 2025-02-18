@@ -39,5 +39,5 @@ interface IconProps extends IconBaseProps {
 export function Icon({ name, ...rest }: IconProps) {
   // @ts-ignore
   const Component = ReactIcons[iconNames[name]] as IconType;
-  return <Component {...rest} />;
+  return <Component style={{ fontSize: "1.5rem" }} {...rest} />;
 }
