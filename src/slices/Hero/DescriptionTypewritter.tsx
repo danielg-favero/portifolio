@@ -12,13 +12,15 @@ export const DescriptionTypewritter: React.FC<DescriptionTypewritterProps> = ({
 }) => {
   const splittedDescriptions = descriptions
     .split(",")
-    .map((word) => word + "...");
+    .map((word) => word + "          ");
 
   return (
-    <MultiTypewritter
-      className="font-light text-sm lg:text-xl text-neutral-100 text-center lg:text-left"
-      words={splittedDescriptions}
-      delay={150}
-    />
+    <div className="flex">
+      <MultiTypewritter
+        className="font-light text-sm lg:text-xl text-neutral-100 text-center lg:text-left"
+        words={splittedDescriptions}
+        delay={100}
+      />
+    </div>
   );
 };

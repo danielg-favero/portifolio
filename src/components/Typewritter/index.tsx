@@ -2,6 +2,7 @@
 
 import { HTMLAttributes, useEffect, useState } from "react";
 import { useTypewritter } from "./useTypewritter";
+import { useTypewritterCursor } from "./useTypeWritterCursos";
 
 interface TypewritterProps extends HTMLAttributes<HTMLParagraphElement> {
   text: string;
@@ -16,6 +17,11 @@ export const Typewritter: React.FC<TypewritterProps> = ({
   ...props
 }) => {
   const animatedText = useTypewritter({ text, delay, infinite });
+  const cursor = useTypewritterCursor({ delay: 500 });
 
-  return <p {...props}>{animatedText}</p>;
+  return (
+    <p {...props}>
+      {animatedText} {cursor}
+    </p>
+  );
 };
