@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import {
   Badge,
   FadeIn,
@@ -10,8 +11,8 @@ import {
 } from "@/components";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import React, { lazy } from "react";
-import {} from "react-icons/fa";
+import React from "react";
+import { DescriptionTypewritter } from "./DescriptionTypewritter";
 
 /**
  * Props for `Hero`.
@@ -22,6 +23,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
+  console.log(slice.primary.description);
   return (
     <section className="w-full px-4 mt-6 lg:mt-12 max-w-7xl">
       {/* <Header /> */}
@@ -36,10 +38,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
                   className="text-center lg:text-left"
                 />
               </div>
-              <RichText
-                field={slice.primary.description}
-                className="text-center lg:text-left"
-              />
+              {slice.primary.description && (
+                <DescriptionTypewritter
+                  descriptions={slice.primary.description}
+                />
+              )}
             </FadeIn>
           </div>
           <div className="flex gap-4">
@@ -55,7 +58,13 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           </div>
         </div>
         <FadeIn>
-          <Image field={slice.primary.image} width={416} height={511} />
+          <Image
+            field={slice.primary.image}
+            width={416}
+            height={511}
+            priority
+            style={{ width: "416px", height: "511px" }}
+          />
         </FadeIn>
       </div>
     </section>

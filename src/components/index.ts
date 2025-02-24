@@ -15,3 +15,4 @@ export * from "./SectionTitle";
 export * from "./SliderButton";
 export * from "./Tab";
 export * from "./FadeIn";
+export * from "./Typewritter";

@@ -38,15 +38,9 @@
 				]
 			},
 			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Laborum velit cillum nostrud. Nulla enim magna aliqua ut anim incididunt veniam in deserunt elit elit dolore. Qui adipisicing dolore sit eu ipsum sunt dolor elit ex sit anim."
-						}
-					}
-				]
+				"__TYPE__": "FieldContent",
+				"value": "room",
+				"type": "Text"
 			}
 		},
 		"items": [
