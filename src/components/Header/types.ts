@@ -1,4 +1,6 @@
 import { LinkProps } from "next/link";
-import { PropsWithChildren } from "react";
+import { AnchorHTMLAttributes, PropsWithChildren } from "react";
 
-export interface IHeaderLinkProps extends LinkProps, PropsWithChildren {}
+export interface IHeaderLinkProps
+  extends LinkProps,
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {}
