@@ -29,7 +29,7 @@ export const MobileHeader: React.FC = () => {
         className={cn(
           "fixed top-0 right-0 z-10 h-screen bg-primary-95 flex flex-col gap-4 justify-center lg:hidden w-full",
           "transition-all",
-          isOpen ? "opacity-100" : "opacity-0"
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
         onClick={toogleIsOpen}
       >

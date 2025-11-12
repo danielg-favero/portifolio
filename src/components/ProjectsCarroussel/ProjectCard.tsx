@@ -100,7 +100,7 @@ export const ProjectCard: React.FC<Simplify<ProjectsSliceDefaultItem>> = (
             </LinkButton>
           )}
           {project.article_link.link_type !== "Any" && (
-            <LinkButton field={project.project_link}>
+            <LinkButton field={project.article_link}>
               <Icon name="graduation-cap" />
             </LinkButton>
           )}

@@ -14,23 +14,7 @@ export const ProjectsCarroussel: React.FC<IProjectsTabsProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-10 w-full">
-      <Swiper
-        slidesPerView={3}
-        breakpoints={{
-          576: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          992: {
-            slidesPerView: 3,
-          },
-          1200: {
-            slidesPerView: 3,
-          },
-        }}
-      >
+      <Swiper>
         {projects.map((project) => (
           <SwiperSlide key={project.title.toString()}>
             <FadeIn>

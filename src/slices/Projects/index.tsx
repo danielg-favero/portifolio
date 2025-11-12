@@ -12,8 +12,8 @@ export type ProjectsProps = SliceComponentProps<Content.ProjectsSlice>;
  */
 const Projects = ({ slice }: ProjectsProps): JSX.Element => {
   return (
-    <Section className="overflow-hidden">
-      <SectionTitle id="projects">Projetos</SectionTitle>
+    <Section id="projects">
+      <SectionTitle>Projetos</SectionTitle>
       <ProjectsCarroussel projects={slice.items} />
     </Section>
   );

@@ -21,8 +21,8 @@ export type AboutProps = SliceComponentProps<Content.AboutSlice>;
  */
 const About = ({ slice }: AboutProps): JSX.Element => {
   return (
-    <Section>
-      <SectionTitle id="about">Sobre Mim</SectionTitle>
+    <Section id="about">
+      <SectionTitle>Sobre Mim</SectionTitle>
       <div className="flex flex-col w-full gap-4 lg:flex-row lg:gap-16">
         <div className="flex flex-col gap-4 lg:gap-6 lg:w-1/2">
           {slice.items.map((item) => (
