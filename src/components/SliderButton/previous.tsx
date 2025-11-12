@@ -1,6 +1,6 @@
 "use client";
 
-import { useSwiper } from "swiper/react";
+import { useSwiper, useSwiperSlide } from "swiper/react";
 import { SliderButton } from ".";
 import { ISliderButtonProps } from "./types";
 

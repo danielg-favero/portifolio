@@ -18,13 +18,16 @@ export const MobileHeader: React.FC = () => {
     <>
       <button
         onClick={toogleIsOpen}
-        className="text-primary-40 absolute top-4 right-4 flex z-20 lg:hidden"
+        className={cn(
+          "text-primary-40 top-4 right-4 flex z-20 lg:hidden",
+          isOpen ? "fixed" : "absolute"
+        )}
       >
         <Icon name={isOpen ? "close" : "bars"} />
       </button>
       <nav
         className={cn(
-          "absolute top-0 right-0 z-10 h-screen bg-primary-95 flex flex-col gap-4 justify-center lg:hidden w-full",
+          "fixed top-0 right-0 z-10 h-screen bg-primary-95 flex flex-col gap-4 justify-center lg:hidden w-full",
           "transition-all",
           isOpen ? "opacity-100" : "opacity-0"
         )}

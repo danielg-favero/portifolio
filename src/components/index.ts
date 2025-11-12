@@ -10,7 +10,7 @@ export * from "./Icon";
 export * from "./InfoCard";
 export * from "./LinkButton";
 export * from "./prismic";
-export * from "./ProjectsTabs";
+export * from "./ProjectsCarroussel";
 export * from "./Section";
 export * from "./SectionTitle";
 export * from "./SliderButton";

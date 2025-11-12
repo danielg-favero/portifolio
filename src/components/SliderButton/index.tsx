@@ -12,7 +12,7 @@ export const SliderButton: React.FC<ISliderButtonProps> = ({
 }) => {
   return (
     <button
-      className="hidden px-5 py-6 text-2xl transition-transform bg-transparent rounded-lg text-primary-40 lg:flex h-fit lg:px-4 lg:py-4 lg:text-3xl hover:bg-primary-80 hover:scale-105 active:bg-primary-70 active:scale-95"
+      className="w-[72px] h-[72px] flex items-center justify-center text-2xl transition-all bg-primary-80 rounded-lg text-primary-30 lg:flex lg:px-4 lg:py-4 lg:text-3xl hover:opacity-75 hover:scale-105 active:opacity-50 active:scale-95 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed"
       {...rest}
     >
       {children}

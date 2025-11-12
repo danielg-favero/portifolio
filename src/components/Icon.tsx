@@ -15,7 +15,9 @@ export type IconKeys =
   | "arrow-right"
   | "link"
   | "bars"
-  | "close";
+  | "close"
+  | "send"
+  | "play";
 
 const iconNames: Record<IconKeys, string> = {
   linkedin: "FaLinkedin",
@@ -30,6 +32,8 @@ const iconNames: Record<IconKeys, string> = {
   link: "FaLink",
   bars: "FaBars",
   close: "FaXmark",
+  send: "FaPaperPlane",
+  play: "FaPlay",
 };
 
 interface IconProps extends IconBaseProps {

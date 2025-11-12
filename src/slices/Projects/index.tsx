@@ -1,4 +1,4 @@
-import { FadeIn, ProjectsTabs, Section, SectionTitle } from "@/components";
+import { ProjectsCarroussel, Section, SectionTitle } from "@/components";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
@@ -12,9 +12,9 @@ export type ProjectsProps = SliceComponentProps<Content.ProjectsSlice>;
  */
 const Projects = ({ slice }: ProjectsProps): JSX.Element => {
   return (
-    <Section>
+    <Section className="overflow-hidden">
       <SectionTitle id="projects">Projetos</SectionTitle>
-      <ProjectsTabs projects={slice.items} />
+      <ProjectsCarroussel projects={slice.items} />
     </Section>
   );
 };

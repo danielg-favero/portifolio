@@ -1,8 +1,10 @@
-import { Footer, Header } from "@/components";
+import { Footer } from "@/components";
 import { Poppins } from "@next/font/google";
 import { Metadata } from "next";
 import Script from "next/script";
+
 import "./globals.css";
+import "react-tooltip/dist/react-tooltip.css";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600"],
@@ -24,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} overflow-x-hidden [&>*:nth-child(odd)]:bg-primary-100 [&>*:nth-child(even)]:bg-primary-95 flex flex-col items-center justify-between min-h-screen bg-primary-100 relative`}
+        className={`${poppins.variable} overflow-x-hidden select-none [&>*:nth-child(odd)]:bg-primary-100 [&>*:nth-child(even)]:bg-primary-95 flex flex-col items-center justify-between min-h-screen bg-primary-100 relative scroll-smooth`}
       >
         {children}
         <Footer />

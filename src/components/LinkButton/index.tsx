@@ -1,7 +1,9 @@
 import React from "react";
-import { ILinkButtonProps } from "./types";
+
+import { cn } from "@/utils";
 import { PrismicNextLink } from "@prismicio/next";
 
+import { ILinkButtonProps } from "./types";
 export * from "./types";
 
 export const LinkButton: React.FC<ILinkButtonProps> = ({
@@ -12,8 +14,11 @@ export const LinkButton: React.FC<ILinkButtonProps> = ({
   return (
     <PrismicNextLink field={field} target="_blank">
       <button
-        className="px-3 py-3 text-2xl transition-transform rounded-lg shadow-lg opacity-50 hover:opacity-100 bg-neutral-100 text-primary-60 lg:flex h-fit lg:px-4 lg:py-4 lg:text-3xl hover:scale-105 active:scale-95 active:opacity-90"
         {...rest}
+        className={cn(
+          "px-2 py-2 text-2xl transition-transform rounded-lg shadow-lg opacity-50 hover:opacity-100 text-primary-40 lg:flex h-fit lg:px-4 lg:py-4 lg:text-3xl hover:scale-105 active:scale-95 active:opacity-90",
+          rest.className
+        )}
       >
         {children}
       </button>

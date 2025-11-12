@@ -25,7 +25,9 @@ export const Badge: React.FC<IBadgeProps> = ({
   };
 
   return (
-    <div className={`px-8 py-2 rounded-full  w-fit ${variantStyle[variant]}`}>
+    <div
+      className={`px-8 py-2 rounded-full w-fit hover:opacity-80 transition-all ${variantStyle[variant]}`}
+    >
       <p className={`font-normal text-center lg:text-base ${sizeStyle[size]}`}>
         {children}
       </p>

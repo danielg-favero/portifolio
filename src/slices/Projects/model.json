@@ -39,19 +39,43 @@
             "thumbnails": []
           }
         },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "select": null
-          }
-        },
         "tags": {
           "type": "Text",
           "config": {
             "label": "Tags",
             "placeholder": ""
+          }
+        },
+        "github_link": {
+          "type": "Link",
+          "config": {
+            "label": "Github Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "article_link": {
+          "type": "Link",
+          "config": {
+            "label": "Article Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "project_link": {
+          "type": "Link",
+          "config": {
+            "label": "Project Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "video_link": {
+          "type": "Link",
+          "config": {
+            "label": "Video Link",
+            "placeholder": "",
+            "select": null
           }
         }
       }

@@ -8,7 +8,6 @@ import {
 } from "@/components";
 import { Content } from "@prismicio/client";
 import { PrismicLink, SliceComponentProps } from "@prismicio/react";
-import Link from "next/link";
 
 /**
  * Props for `OnTv`.
@@ -21,8 +20,8 @@ export type OnTvProps = SliceComponentProps<Content.OnTvSlice>;
 const OnTv = ({ slice }: OnTvProps): JSX.Element => {
   return (
     <Section>
-      <SectionTitle id="na-midia">Na Midia</SectionTitle>
-      <div className="flex gap-16 gap-10 flex-wrap ">
+      <SectionTitle id="midia">Na Midia</SectionTitle>
+      <div className="flex gap-16 lg:gap-10 flex-wrap ">
         {slice.items.map((item, index) => (
           <FadeIn key={index}>
             <PrismicLink field={item.link}>
