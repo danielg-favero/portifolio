@@ -24,7 +24,7 @@ export const MobileHeader: React.FC = () => {
       </button>
       <nav
         className={cn(
-          "absolute top-0 right-0 z-10 h-screen bg-primary-95 flex flex-col justify-center lg:hidden w-full",
+          "absolute top-0 right-0 z-10 h-screen bg-primary-95 flex flex-col gap-4 justify-center lg:hidden w-full",
           "transition-all",
           isOpen ? "opacity-100" : "opacity-0"
         )}

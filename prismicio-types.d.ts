@@ -317,16 +317,6 @@ export type OnTvSlice = prismic.SharedSlice<"on_tv", OnTvSliceVariation>;
  */
 export interface ProfessionalSliceDefaultItem {
   /**
-   * Logo field in *Professional → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: professional.items[].logo
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  logo: prismic.ImageField<never>;
-
-  /**
    * Description field in *Professional → Items*
    *
    * - **Field Type**: Rich Text
@@ -375,6 +365,16 @@ export interface ProfessionalSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   tags: prismic.KeyTextField;
+
+  /**
+   * Company Name field in *Professional → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: professional.items[].company_name
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_name: prismic.RichTextField;
 }
 
 /**

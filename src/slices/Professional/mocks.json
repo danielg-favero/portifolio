@@ -8,32 +8,6 @@
 				"__TYPE__": "GroupItemContent",
 				"value": [
 					[
-						"logo",
-						{
-							"origin": {
-								"id": "main",
-								"url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
-								"width": 2545,
-								"height": 2545
-							},
-							"url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
-							"width": 2545,
-							"height": 2545,
-							"edit": {
-								"zoom": 1,
-								"crop": {
-									"x": 0,
-									"y": 0
-								},
-								"background": "transparent"
-							},
-							"credits": null,
-							"alt": null,
-							"__TYPE__": "ImageContent",
-							"thumbnails": {}
-						}
-					],
-					[
 						"title",
 						{
 							"__TYPE__": "StructuredTextContent",
@@ -83,6 +57,20 @@
 							"__TYPE__": "FieldContent",
 							"value": "point",
 							"type": "Text"
+						}
+					],
+					[
+						"company_name",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Anim dolor nulla deserunt cillum labore amet aliqua incididunt ea non reprehenderit sunt do adipisicing esse. Exercitation enim do irure fugiat nulla occaecat in."
+									}
+								}
+							]
 						}
 					]
 				]
