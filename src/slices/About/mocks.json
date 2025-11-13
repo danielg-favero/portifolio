@@ -25,6 +25,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "ready",
 				"type": "Text"
+			},
+			"curriculum_label": {
+				"__TYPE__": "FieldContent",
+				"value": "sister",
+				"type": "Text"
 			}
 		},
 		"items": [

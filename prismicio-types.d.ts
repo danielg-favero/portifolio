@@ -166,6 +166,16 @@ export interface AboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_title: prismic.KeyTextField;
+
+  /**
+   * Curriculum Label field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.curriculum_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  curriculum_label: prismic.KeyTextField;
 }
 
 /**

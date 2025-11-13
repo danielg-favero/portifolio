@@ -44,7 +44,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
           <FadeIn>
             <Button field={slice.primary.curriculum}>
               <Icon name="download" />
-              Currículo
+              {slice.primary.curriculum_label}
             </Button>
           </FadeIn>
         </div>

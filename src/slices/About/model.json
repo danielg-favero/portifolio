@@ -35,6 +35,13 @@
             "label": "Section Title",
             "placeholder": ""
           }
+        },
+        "curriculum_label": {
+          "type": "Text",
+          "config": {
+            "label": "Curriculum Label",
+            "placeholder": ""
+          }
         }
       },
       "items": {
