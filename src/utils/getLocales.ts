@@ -21,7 +21,6 @@ export async function getLocales(
 
   return [doc, ...altDocs].map((page) => {
     const lang = repository?.languages.find((l) => l.id === page.lang);
-    console.log({ lang, page });
 
     return {
       lang: lang?.id || "",
