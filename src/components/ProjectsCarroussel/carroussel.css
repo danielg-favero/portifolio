@@ -1,5 +1,48 @@
-.swiper-slide {
-    width: auto !important;
-    height: auto;
-    display: flex;
+.embla {
+  margin: auto;
+  --slide-spacing: 4rem;
+  --slide-size: 100%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  height: auto;
+}
+
+@media (min-width: 576px) {
+  .embla {
+    --slide-size: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .embla {
+    --slide-size: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .embla {
+    --slide-size: 50%;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .embla {
+    --slide-size: 33%;
+  }
 }

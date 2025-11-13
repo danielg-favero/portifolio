@@ -2,8 +2,6 @@
 
 import { ISliderButtonProps } from "./types";
 
-export * from "./next";
-export * from "./previous";
 export * from "./types";
 
 export const SliderButton: React.FC<ISliderButtonProps> = ({

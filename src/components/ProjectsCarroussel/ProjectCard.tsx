@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<Simplify<ProjectsSliceDefaultItem>> = (
     };
   };
 
-  const summarizeDescription = (description?: string, limit = 100) => {
+  const summarizeDescription = (description?: string, limit = 200) => {
     if (!description) return "";
     if (description.length <= limit) return description || "";
 
@@ -51,7 +51,7 @@ export const ProjectCard: React.FC<Simplify<ProjectsSliceDefaultItem>> = (
   const isSummarized = summarizedDescription.length < descriptionStr.length;
 
   return (
-    <div className="max-w-[288px] lg:max-w-md flex flex-col h-full mr-8 lg:mr-16">
+    <div className="max-w-[288px] lg:max-w-md flex flex-col h-full">
       <Image field={project.image} className="object-cover aspect-video" />
       <div className="flex flex-col justify-between gap-8 p-6 pb-10 bg-primary-80 h-full">
         <div className="flex flex-col gap-6">

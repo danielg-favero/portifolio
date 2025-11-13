@@ -29,7 +29,7 @@ export const FadeIn = ({ children }: PropsWithChildren) => {
   return (
     <section
       ref={domRef}
-      className={`fadein-section ${isVisible ? "fadein-visible-section" : ""}`}
+      className={`fadein-section ${isVisible ? "fadein-visible-section" : ""} h-full`}
     >
       {children}
     </section>
