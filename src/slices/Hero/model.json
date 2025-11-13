@@ -12,14 +12,6 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -33,6 +25,13 @@
           "type": "Text",
           "config": {
             "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "greetings": {
+          "type": "Text",
+          "config": {
+            "label": "Greetings",
             "placeholder": ""
           }
         }

@@ -9,10 +9,11 @@ export * from "./types";
 export const LinkButton: React.FC<ILinkButtonProps> = ({
   children,
   field,
+  target = "_blank",
   ...rest
 }) => {
   return (
-    <PrismicNextLink field={field} target="_blank">
+    <PrismicNextLink field={field} target={target}>
       <button
         {...rest}
         className={cn(

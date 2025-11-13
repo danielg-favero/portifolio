@@ -50,8 +50,6 @@ export const ProjectCard: React.FC<Simplify<ProjectsSliceDefaultItem>> = (
   const summarizedDescription = summarizeDescription(descriptionStr);
   const isSummarized = summarizedDescription.length < descriptionStr.length;
 
-  console.log(project);
-
   return (
     <div className="max-w-[288px] lg:max-w-md flex flex-col h-full mr-8 lg:mr-16">
       <Image field={project.image} className="object-cover aspect-video" />
@@ -81,10 +79,10 @@ export const ProjectCard: React.FC<Simplify<ProjectsSliceDefaultItem>> = (
           </p>
           {isSummarized && (
             <a
-              className="text-lg lg:text-xl text-primary-30 underline cursor-pointer"
+              className="text-lg lg:text-xl text-primary-30 cursor-pointer"
               onClick={toggleShowMore}
             >
-              {showMore ? "Ver menos" : "Ver mais"}
+              {showMore ? "-" : "+"}
             </a>
           )}
         </div>

@@ -20,6 +20,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "ready",
+				"type": "Text"
 			}
 		},
 		"items": [

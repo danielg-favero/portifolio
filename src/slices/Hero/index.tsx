@@ -5,7 +5,6 @@ import React from "react";
 import {
   Badge,
   FadeIn,
-  Header,
   HexagonButton,
   Icon,
   IconKeys,
@@ -28,12 +27,11 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   return (
     <Section className="h-screen flex flex-col items-center justify-center relative">
-      <Header />
       <div className="flex flex-col justify-center items-center gap-14">
         <div className="flex flex-col items-center gap-2 lg:gap-4">
           <FadeIn>
             <div className="flex flex-col items-center justify-center gap-4">
-              <Badge variant="secondary">Olá, me chamo</Badge>
+              <Badge variant="secondary">{slice.primary.greetings}</Badge>
               <RichText
                 field={slice.primary.title}
                 className="text-center lg:text-left"

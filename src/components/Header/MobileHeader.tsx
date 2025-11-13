@@ -3,11 +3,21 @@
 import { useState } from "react";
 
 import { cn } from "@/utils";
+import { GroupField } from "@prismicio/client";
 
 import { Icon } from "../Icon";
 import { HeaderLink } from "./HeaderLink";
 
-export const MobileHeader: React.FC = () => {
+import {
+  PageHeaderDocumentDataLinksItem,
+  Simplify,
+} from "../../../prismicio-types";
+
+interface MobileHeaderProps {
+  links: GroupField<Simplify<PageHeaderDocumentDataLinksItem>>;
+}
+
+export const MobileHeader: React.FC<MobileHeaderProps> = ({ links }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toogleIsOpen = () => {
@@ -33,10 +43,15 @@ export const MobileHeader: React.FC = () => {
         )}
         onClick={toogleIsOpen}
       >
-        <HeaderLink href="#projects">Projetos</HeaderLink>
-        <HeaderLink href="#experience">Experiências profissionais</HeaderLink>
-        <HeaderLink href="#midia">Na mídia</HeaderLink>
-        <HeaderLink href="#about">Sobre mim</HeaderLink>
+        {links.map((link) => (
+          <HeaderLink
+            link={link}
+            key={link.label}
+            className="flex items-center justify-center w-full"
+          >
+            {link.label}
+          </HeaderLink>
+        ))}
       </nav>
     </>
   );

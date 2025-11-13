@@ -13,7 +13,7 @@ export type ProfessionalProps = SliceComponentProps<Content.ProfessionalSlice>;
 const Professional = ({ slice }: ProfessionalProps): JSX.Element => {
   return (
     <Section className="pb-20 lg:pb-0" id="experience">
-      <SectionTitle>Experiências Profissionais</SectionTitle>
+      <SectionTitle>{slice.primary.section_title}</SectionTitle>
       <ExperiencesCarroussel experiences={slice.items} />
     </Section>
   );

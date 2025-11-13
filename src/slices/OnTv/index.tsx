@@ -20,7 +20,7 @@ export type OnTvProps = SliceComponentProps<Content.OnTvSlice>;
 const OnTv = ({ slice }: OnTvProps): JSX.Element => {
   return (
     <Section id="midia">
-      <SectionTitle>Na Midia</SectionTitle>
+      <SectionTitle>{slice.primary.section_title}</SectionTitle>
       <div className="flex gap-16 lg:gap-10 flex-wrap ">
         {slice.items.map((item, index) => (
           <FadeIn key={index}>

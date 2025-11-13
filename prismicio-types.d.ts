@@ -74,7 +74,64 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomepageDocument;
+/**
+ * Item in *Page Header → Links*
+ */
+export interface PageHeaderDocumentDataLinksItem {
+  /**
+   * Label field in *Page Header → Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page_header.links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Internal Link field in *Page Header → Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page_header.links[].internal_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  internal_link: prismic.LinkField;
+}
+
+/**
+ * Content for Page Header documents
+ */
+interface PageHeaderDocumentData {
+  /**
+   * Links field in *Page Header*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page_header.links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  links: prismic.GroupField<Simplify<PageHeaderDocumentDataLinksItem>>;
+}
+
+/**
+ * Page Header document from Prismic
+ *
+ * - **API ID**: `page_header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageHeaderDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<PageHeaderDocumentData>,
+    "page_header",
+    Lang
+  >;
+
+export type AllDocumentTypes = HomepageDocument | PageHeaderDocument;
 
 /**
  * Primary content in *About → Default → Primary*
@@ -99,6 +156,16 @@ export interface AboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   curriculum: prismic.LinkField;
+
+  /**
+   * Section Title field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
 }
 
 /**
@@ -158,16 +225,6 @@ export type AboutSlice = prismic.SharedSlice<"about", AboutSliceVariation>;
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * Image field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
    * Title field in *Hero → Default → Primary*
    *
    * - **Field Type**: Rich Text
@@ -186,6 +243,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   description: prismic.KeyTextField;
+
+  /**
+   * Greetings field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.greetings
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  greetings: prismic.KeyTextField;
 }
 
 /**
@@ -241,6 +308,21 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *OnTv → Default → Primary*
+ */
+export interface OnTvSliceDefaultPrimary {
+  /**
+   * Section Title field in *OnTv → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: on_tv.default.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *OnTv → Items*
  */
 export interface OnTvSliceDefaultItem {
@@ -294,7 +376,7 @@ export interface OnTvSliceDefaultItem {
  */
 export type OnTvSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<OnTvSliceDefaultPrimary>,
   Simplify<OnTvSliceDefaultItem>
 >;
 
@@ -311,6 +393,21 @@ type OnTvSliceVariation = OnTvSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type OnTvSlice = prismic.SharedSlice<"on_tv", OnTvSliceVariation>;
+
+/**
+ * Primary content in *Professional → Default → Primary*
+ */
+export interface ProfessionalSliceDefaultPrimary {
+  /**
+   * Section Title field in *Professional → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: professional.default.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+}
 
 /**
  * Primary content in *Professional → Items*
@@ -386,7 +483,7 @@ export interface ProfessionalSliceDefaultItem {
  */
 export type ProfessionalSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<ProfessionalSliceDefaultPrimary>,
   Simplify<ProfessionalSliceDefaultItem>
 >;
 
@@ -406,6 +503,21 @@ export type ProfessionalSlice = prismic.SharedSlice<
   "professional",
   ProfessionalSliceVariation
 >;
+
+/**
+ * Primary content in *Projects → Default → Primary*
+ */
+export interface ProjectsSliceDefaultPrimary {
+  /**
+   * Section Title field in *Projects → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.default.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+}
 
 /**
  * Primary content in *Projects → Items*
@@ -501,7 +613,7 @@ export interface ProjectsSliceDefaultItem {
  */
 export type ProjectsSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<ProjectsSliceDefaultPrimary>,
   Simplify<ProjectsSliceDefaultItem>
 >;
 
@@ -546,6 +658,9 @@ declare module "@prismicio/client" {
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      PageHeaderDocument,
+      PageHeaderDocumentData,
+      PageHeaderDocumentDataLinksItem,
       AllDocumentTypes,
       AboutSlice,
       AboutSliceDefaultPrimary,
@@ -558,14 +673,17 @@ declare module "@prismicio/client" {
       HeroSliceVariation,
       HeroSliceDefault,
       OnTvSlice,
+      OnTvSliceDefaultPrimary,
       OnTvSliceDefaultItem,
       OnTvSliceVariation,
       OnTvSliceDefault,
       ProfessionalSlice,
+      ProfessionalSliceDefaultPrimary,
       ProfessionalSliceDefaultItem,
       ProfessionalSliceVariation,
       ProfessionalSliceDefault,
       ProjectsSlice,
+      ProjectsSliceDefaultPrimary,
       ProjectsSliceDefaultItem,
       ProjectsSliceVariation,
       ProjectsSliceDefault,

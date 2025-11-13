@@ -1,6 +1,12 @@
 import { LinkProps } from "next/link";
-import { AnchorHTMLAttributes, PropsWithChildren } from "react";
+import { AnchorHTMLAttributes, HTMLAttributes, PropsWithChildren } from "react";
 
-export interface IHeaderLinkProps
-  extends LinkProps,
-    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {}
+import {
+  PageHeaderDocumentDataLinksItem,
+  Simplify,
+} from "../../../prismicio-types";
+
+export interface IHeaderLinkProps extends PropsWithChildren {
+  link: Simplify<PageHeaderDocumentDataLinksItem>;
+  className?: string;
+}

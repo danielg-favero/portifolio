@@ -13,7 +13,7 @@ export type ProjectsProps = SliceComponentProps<Content.ProjectsSlice>;
 const Projects = ({ slice }: ProjectsProps): JSX.Element => {
   return (
     <Section id="projects">
-      <SectionTitle>Projetos</SectionTitle>
+      <SectionTitle>{slice.primary.section_title}</SectionTitle>
       <ProjectsCarroussel projects={slice.items} />
     </Section>
   );

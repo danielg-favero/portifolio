@@ -28,6 +28,13 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": ""
+          }
         }
       },
       "items": {
