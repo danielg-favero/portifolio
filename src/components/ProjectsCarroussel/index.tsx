@@ -5,17 +5,33 @@ import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 
 import { FadeIn, Icon, SliderButton } from "@/components";
+import { AvailableLocales } from "@/types";
+import { useLocale } from "@/hooks";
 
 import { IProjectsTabsProps } from "./types";
 import { ProjectCard } from "./ProjectCard";
 import { useNavigationButtons } from "./useNavigationButtons";
 
 import "./carroussel.css";
+import { asText } from "@prismicio/client";
+
+const translations: Record<AvailableLocales, Record<string, string>> = {
+  "en-us": {
+    sliderNextButton: "Next slide",
+    sliderPreviousButton: "Previous slide",
+  },
+  "pt-br": {
+    sliderNextButton: "Próximo slide",
+    sliderPreviousButton: "Slide anterior",
+  },
+};
 
 export const ProjectsCarroussel: React.FC<IProjectsTabsProps> = ({
   projects,
 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({}, [WheelGesturesPlugin()]);
+  const { currentLocale } = useLocale();
+  const localizedTranslations = translations[currentLocale];
 
   const {
     prevBtnDisabled,
@@ -29,7 +45,7 @@ export const ProjectsCarroussel: React.FC<IProjectsTabsProps> = ({
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {projects.map((project) => (
-            <div className="embla__slide" key={project.title.toString()}>
+            <div className="embla__slide" key={asText(project.title)}>
               <FadeIn>
                 <ProjectCard {...project} />
               </FadeIn>
@@ -39,10 +55,18 @@ export const ProjectsCarroussel: React.FC<IProjectsTabsProps> = ({
       </div>
 
       <div className="hidden lg:flex items-center justify-between lg:justify-center gap-16 mt-10 lg:mt-16 max-w-7xl ">
-        <SliderButton onClick={onPrevButtonClick} disabled={prevBtnDisabled}>
+        <SliderButton
+          onClick={onPrevButtonClick}
+          disabled={prevBtnDisabled}
+          aria-label={localizedTranslations.sliderPreviousButton}
+        >
           <Icon name="arrow-left" />
         </SliderButton>
-        <SliderButton onClick={onNextButtonClick} disabled={nextBtnDisabled}>
+        <SliderButton
+          onClick={onNextButtonClick}
+          disabled={nextBtnDisabled}
+          aria-label={localizedTranslations.sliderNextButton}
+        >
           <Icon name="arrow-right" />
         </SliderButton>
       </div>

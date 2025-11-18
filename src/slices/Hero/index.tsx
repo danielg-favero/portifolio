@@ -48,7 +48,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           {slice.items.map((item) => {
             return (
               <FadeIn key={item.sociallink.text}>
-                <HexagonButton field={item.sociallink}>
+                <HexagonButton
+                  field={item.sociallink}
+                  aria-label={item.icon as string}
+                  role="link"
+                >
                   <Icon name={item.icon as IconKeys} />
                 </HexagonButton>
               </FadeIn>

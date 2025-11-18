@@ -63,12 +63,12 @@ export const ProjectCard: React.FC<Simplify<ProjectsSliceDefaultItem>> = (
                   {tag}
                 </Badge>
               ))}
-              <a
+              <div
                 data-tooltip-id="project-tags-tooltip"
                 data-tooltip-content={tagsToHide.join(", ")}
               >
                 <Badge variant="secondary">+{tagsToHide.length}</Badge>
-              </a>
+              </div>
               <Tooltip id="project-tags-tooltip" />
             </div>
           </div>
@@ -78,32 +78,32 @@ export const ProjectCard: React.FC<Simplify<ProjectsSliceDefaultItem>> = (
               : summarizeDescription(asText(project.description))}
           </p>
           {isSummarized && (
-            <a
-              className="text-lg lg:text-xl text-primary-30 cursor-pointer"
+            <button
+              className="text-lg lg:text-xl text-primary-30 cursor-pointer w-fit"
               onClick={toggleShowMore}
             >
               {showMore ? "-" : "+"}
-            </a>
+            </button>
           )}
         </div>
         <div className="flex justify-end">
           {project.github_link.link_type !== "Any" && (
-            <LinkButton field={project.github_link}>
+            <LinkButton field={project.github_link} aria-label="Github">
               <Icon name="github" />
             </LinkButton>
           )}
           {project.project_link.link_type !== "Any" && (
-            <LinkButton field={project.project_link}>
+            <LinkButton field={project.project_link} aria-label="Website">
               <Icon name="send" />
             </LinkButton>
           )}
           {project.article_link.link_type !== "Any" && (
-            <LinkButton field={project.article_link}>
+            <LinkButton field={project.article_link} aria-label="Paper">
               <Icon name="graduation-cap" />
             </LinkButton>
           )}
           {project.video_link.link_type !== "Any" && (
-            <LinkButton field={project.video_link}>
+            <LinkButton field={project.video_link} aria-label="Video">
               <Icon name="play" />
             </LinkButton>
           )}

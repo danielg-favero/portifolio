@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { cn } from "@/utils";
 import { GroupField } from "@prismicio/client";
+import { AvailableLocales } from "@/types";
 
 import { Icon } from "../Icon";
 import { HeaderLink } from "./HeaderLink";
@@ -13,12 +14,27 @@ import {
   Simplify,
 } from "../../../prismicio-types";
 
+import { useLocale } from "@/hooks";
+
 interface MobileHeaderProps {
   links: GroupField<Simplify<PageHeaderDocumentDataLinksItem>>;
 }
 
+const translations: Record<AvailableLocales, Record<string, string>> = {
+  "en-us": {
+    headerOpenButtonAriaLabel: "Open header links",
+    headerCloseButtonAriaLabel: "Close header links",
+  },
+  "pt-br": {
+    headerOpenButtonAriaLabel: "Abrir links do cabeçalho",
+    headerCloseButtonAriaLabel: "Fechar links do cabeçalho",
+  },
+};
+
 export const MobileHeader: React.FC<MobileHeaderProps> = ({ links }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { currentLocale } = useLocale();
+  const localizedTranslations = translations[currentLocale];
 
   const toogleIsOpen = () => {
     setIsOpen((prev) => !prev);
@@ -32,6 +48,11 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({ links }) => {
           "text-primary-40 top-4 right-4 flex z-20 lg:hidden",
           isOpen ? "fixed" : "absolute"
         )}
+        aria-label={
+          isOpen
+            ? localizedTranslations.headerCloseButtonAriaLabel
+            : localizedTranslations.headerOpenButtonAriaLabel
+        }
       >
         <Icon name={isOpen ? "close" : "bars"} />
       </button>

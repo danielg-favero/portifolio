@@ -12,7 +12,7 @@ export const RichText: React.FC<
       components={{
         heading1: ({ children }) => (
           <h1
-            className={`${className} font-bold text-3xl lg:text-6xl text-primary-50 `}
+            className={`${className} font-bold text-3xl lg:text-6xl text-primary-60 `}
           >
             {children}
           </h1>

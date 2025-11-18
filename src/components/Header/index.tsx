@@ -12,6 +12,7 @@ import {
   PageHeaderDocumentDataLinksItem,
   Simplify,
 } from "../../../prismicio-types";
+import { Locales } from "@/types";
 
 interface HeaderProps {
   links: GroupField<Simplify<PageHeaderDocumentDataLinksItem>>;

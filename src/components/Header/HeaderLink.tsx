@@ -18,7 +18,7 @@ export const HeaderLink: React.FC<IHeaderLinkProps> = ({
       field={link.internal_link}
       target="_self"
       className={cn(
-        "px-6 py-4 text-2xl font-medium text-center lg:text-base text-primary-40 hover:text-primary-50 active:text-primary-60",
+        "px-6 py-4 text-2xl font-medium text-center lg:text-base !text-primary-60 hover:text-primary-50 active:text-primary-40",
         className
       )}
     >

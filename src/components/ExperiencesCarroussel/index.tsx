@@ -2,13 +2,13 @@
 
 import { IExperiencesCarrousselProps } from "./types";
 
-import { DateField } from "@prismicio/client";
+import { asText, DateField } from "@prismicio/client";
 
 import { Badge } from "../Badge";
 import { RichText } from "../prismic";
 import { FadeIn } from "../FadeIn";
 import { cn } from "@/utils";
-import { HTMLAttributes } from "react";
+import { Fragment, HTMLAttributes } from "react";
 
 const ExperienceRod: React.FC<
   HTMLAttributes<HTMLDivElement> & { bg: string }
@@ -44,8 +44,8 @@ export const ExperiencesCarroussel: React.FC<IExperiencesCarrousselProps> = ({
   return (
     <div className="flex flex-col lg:gap-0 gap-16">
       {experiences.map((item, index) => (
-        <>
-          <FadeIn key={JSON.stringify(item.description)}>
+        <Fragment key={asText(item.description)}>
+          <FadeIn>
             <div className="flex flex-col gap-8 lg:16 w-full lg:flex-row">
               <div className="w-full lg:w-52">
                 <p className="text-xs font-light text-primary-40 lg:w-52 lg:text-base">
@@ -90,7 +90,7 @@ export const ExperiencesCarroussel: React.FC<IExperiencesCarrousselProps> = ({
             className="h-24 relative self-end mr-[1.5px] hidden lg:flex"
             bg={item.end_date ? "bg-primary-70" : "bg-primary-50"}
           />
-        </>
+        </Fragment>
       ))}
     </div>
   );

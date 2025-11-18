@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.className}>
       <body
-        className={`${poppins.variable} overflow-x-hidden select-none [&>section:nth-child(odd)]:bg-primary-100 [&>section:nth-child(even)]:bg-primary-95 flex flex-col items-center justify-between min-h-screen bg-primary-100 relative scroll-smooth`}
+        className={`overflow-x-hidden select-none [&>section:nth-child(odd)]:bg-primary-100 [&>section:nth-child(even)]:bg-primary-95 flex flex-col items-center justify-between min-h-screen bg-primary-100 relative scroll-smooth`}
       >
         {children}
         <Footer />
